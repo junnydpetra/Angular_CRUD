@@ -27,7 +27,7 @@
       <ng-container matColumnDef="options">
         <th mat-header-cell *matHeaderCellDef> Opções </th>
         <td mat-cell *matCellDef="let element"> {{element.options}}
-          <button mat-icon-button color="primary">
+          <button mat-icon-button (click)="editElement(element)" color="primary">
             <mat-icon>edit</mat-icon>
           </button>
           <button mat-icon-button (click)="deleteElement(element.position)" color="accent">
